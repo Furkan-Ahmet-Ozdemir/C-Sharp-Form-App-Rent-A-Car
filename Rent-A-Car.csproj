@@ -52,6 +52,18 @@
     <Compile Include="AdminLogIn.Designer.cs">
       <DependentUpon>AdminLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRegister.Designer.cs">
+      <DependentUpon>AdminRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,13 +84,19 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="_rent_a_carDataSet.Designer.cs">
+    <Compile Include="_rent_a_carDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_rent_a_carDataSet.xsd</DependentUpon>
+      <DependentUpon>_rent_a_carDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminLogIn.resx">
       <DependentUpon>AdminLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRegister.resx">
+      <DependentUpon>AdminRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
@@ -107,16 +125,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_rent_a_carDataSet.xsc">
-      <DependentUpon>_rent_a_carDataSet.xsd</DependentUpon>
+    <None Include="_rent_a_carDataSet1.xsc">
+      <DependentUpon>_rent_a_carDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="_rent_a_carDataSet.xsd">
+    <None Include="_rent_a_carDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_rent_a_carDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>_rent_a_carDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_rent_a_carDataSet.xss">
-      <DependentUpon>_rent_a_carDataSet.xsd</DependentUpon>
+    <None Include="_rent_a_carDataSet1.xss">
+      <DependentUpon>_rent_a_carDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

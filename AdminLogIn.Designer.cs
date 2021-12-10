@@ -37,6 +37,7 @@ namespace Rent_A_Car
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@ namespace Rent_A_Car
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 91);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -80,6 +82,7 @@ namespace Rent_A_Car
             this.label3.Size = new System.Drawing.Size(193, 32);
             this.label3.TabIndex = 8;
             this.label3.Text = "Admin Log In";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4
             // 
@@ -90,6 +93,7 @@ namespace Rent_A_Car
             this.label4.Size = new System.Drawing.Size(144, 29);
             this.label4.TabIndex = 12;
             this.label4.Text = "Password   :";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // textBox2
             // 
@@ -99,6 +103,7 @@ namespace Rent_A_Car
             this.textBox2.Size = new System.Drawing.Size(226, 34);
             this.textBox2.TabIndex = 11;
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -109,6 +114,7 @@ namespace Rent_A_Car
             this.label2.Size = new System.Drawing.Size(147, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "User Name :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -117,12 +123,25 @@ namespace Rent_A_Car
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 34);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(312, 327);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(104, 17);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Admin Register";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 384);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -150,6 +169,7 @@ namespace Rent_A_Car
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

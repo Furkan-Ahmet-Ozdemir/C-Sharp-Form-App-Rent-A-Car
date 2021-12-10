@@ -39,7 +39,7 @@ namespace Rent_A_Car
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            label4.Text = textBox1.Text;
+            
         }
     }
 }
