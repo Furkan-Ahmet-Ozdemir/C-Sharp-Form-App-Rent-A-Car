@@ -42,29 +42,35 @@ namespace Rent_A_Car
                 return;
             }
 
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Data Source=DESKTOP-MO050TQ\\; Initial Catalog=rent-a-car; Integrated Security=True";
-            conn.Open();
-
-            DataSet ds = new DataSet();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from [USER] WHERE USER_NAME='" + textBox1.Text + "' AND PASSWORD='" + textBox2.Text + "'", conn);
-            sda.Fill(ds);
-
-            if (ds.Tables.Count == 0)
+            try
             {
-                MessageBox.Show("Geçersiz Kullanıcı.", "Chat Giriş", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SqlConnection conn = new SqlConnection();
+                conn.ConnectionString = "Data Source=DESKTOP-MO050TQ\\; Initial Catalog=rent-a-car; Integrated Security=True";
+                conn.Open();
+                DataSet ds = new DataSet();
+                SqlDataAdapter sda = new SqlDataAdapter("select * from [USER] WHERE USER_NAME='" + textBox1.Text + "' AND PASSWORD='" + textBox2.Text + "'", conn);
+                sda.Fill(ds);
+                if (ds.Tables.Count == 0)
+                {
+                    MessageBox.Show("Geçersiz Kullanıcı.", "Chat Giriş", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (ds.Tables.Count == 1)
+                {
+                    //MessageBox.Show("Hoşgeldiniz.", "Chat Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Main main = new Main();
+                    main.kullaniciAdi = textBox1.Text;
+
+                    this.Visible = false;
+                    main.ShowDialog();
+                    this.Visible = true;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                }
+                conn.Close();
             }
-
-            else if (ds.Tables.Count == 1)
+            catch (Exception hata)
             {
-                //MessageBox.Show("Hoşgeldiniz.", "Chat Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form main = new Main();
-                this.Visible = false;
-                main.ShowDialog();
-                this.Visible = true;
-                textBox1.Text = "";
-                textBox2.Text = "";
-
+                MessageBox.Show("Hata meydana geldi !!!!!!!!!!!!" + hata.Message);
             }
 
         }

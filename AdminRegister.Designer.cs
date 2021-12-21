@@ -89,9 +89,10 @@ namespace Rent_A_Car
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(257, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 32);
+            this.label3.Size = new System.Drawing.Size(223, 32);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Admin Log In";
+            this.label3.Text = "Admin Register";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
@@ -196,6 +197,7 @@ namespace Rent_A_Car
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdminRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminRegister";

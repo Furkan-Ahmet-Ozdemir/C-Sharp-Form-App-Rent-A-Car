@@ -47,6 +47,7 @@ namespace Rent_A_Car
             this.label8 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +87,6 @@ namespace Rent_A_Car
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(279, 34);
             this.textBox1.TabIndex = 6;
-            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -162,6 +162,8 @@ namespace Rent_A_Car
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(279, 34);
             this.textBox5.TabIndex = 16;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label7
             // 
@@ -182,6 +184,7 @@ namespace Rent_A_Car
             this.textBox6.Size = new System.Drawing.Size(279, 34);
             this.textBox6.TabIndex = 18;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // button1
             // 
@@ -230,11 +233,22 @@ namespace Rent_A_Car
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(209, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(200, 32);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "User Register";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 607);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
@@ -252,6 +266,7 @@ namespace Rent_A_Car
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
@@ -283,5 +298,6 @@ namespace Rent_A_Car
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label9;
     }
 }

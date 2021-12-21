@@ -19,9 +19,10 @@ namespace Rent_A_Car
         }
         static string conStrnig = "Data Source=DESKTOP-MO050TQ\\; Initial Catalog=rent-a-car; Integrated Security=True";
         SqlConnection connect = new SqlConnection(conStrnig);
-      
+        
 
-        private void button1_Click(object sender, EventArgs e)
+
+    private void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -89,6 +90,11 @@ namespace Rent_A_Car
 
 
 
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }
